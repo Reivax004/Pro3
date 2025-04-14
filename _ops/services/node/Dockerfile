@@ -8,7 +8,6 @@ RUN apt-get update && \
     ca-certificates
 
 RUN npm install -g pnpm
-RUN pnpm install
 
 ENTRYPOINT ["/docker-scripts/entrypoint.sh"]
 
