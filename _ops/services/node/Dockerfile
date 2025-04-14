@@ -1,10 +1,10 @@
 FROM node:22-bookworm
 
-COPY ./services/node/scripts/entrypoint.sh /docker-scripts/entrypoint.sh
+COPY services/node/scripts/entrypoint.sh /docker-scripts/entrypoint.sh
 RUN chmod +x /docker-scripts/entrypoint.sh
 
-RUN apt-get update &&\
-    apt-get install -y --no-install-recommends\
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     ca-certificates
 
 RUN npm install -g pnpm
