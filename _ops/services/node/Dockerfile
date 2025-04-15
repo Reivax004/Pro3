@@ -1,6 +1,6 @@
 FROM node:22-bookworm
 
-COPY services/node/scripts/entrypoint.sh /docker-scripts/entrypoint.sh
+COPY services/node/scripts/entrypoint.sh /docker-scripts/entrypoint.sh # Le répertoire est relative au context défini dans le docker-compose.yaml
 RUN chmod +x /docker-scripts/entrypoint.sh
 
 RUN apt-get update && \
